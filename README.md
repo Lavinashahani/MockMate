@@ -1,11 +1,7 @@
-<div align="center">
-  <img src="https://i.imgur.com/your-logo-image-code.png" alt="MockMate Logo" width="150"/>
-  <h1>MockMate - AI Interview Coach</h1>
+<div>
+  <h1>MockMate</h1>
   <p>
     An AI-powered application designed to help users prepare for technical interviews using the MERN stack and the Gemini API.
-  </p>
-  <p>
-    <a href="your-deployment-link-here"><strong>View Live Demo »</strong></a>
   </p>
 </div>
 
@@ -18,8 +14,6 @@
     <li><a href="#key-features">Key Features</a></li>
     <li><a href="#tech-stack">Tech Stack</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
@@ -27,11 +21,7 @@
 
 ## About The Project
 
-<div align="center">
-  <img src="https://i.imgur.com/your-project-screenshot-or-gif.gif" alt="Project Screenshot">
-</div>
-
-MockMate is an intelligent interview preparation platform designed to help aspiring software developers ace their technical interviews. It provides a dynamic and realistic mock interview experience by leveraging the power of Google's Gemini API to generate relevant, role-specific questions and answers in real-time. Users can track their progress through a personal dashboard, making interview prep more structured and effective.
+MockMate is an AI interview preparation platform designed to help aspiring software developers ace their technical interviews. It provides a dynamic and realistic mock interview experience by leveraging the power of Google's Gemini API to generate relevant, role-specific questions and answers in real-time. Users can track their progress through a personal dashboard, making interview prep more structured and effective.
 
 <br />
 
@@ -74,15 +64,18 @@ Make sure you have Node.js, npm, and MongoDB installed on your machine.
 ### Installation
 
 1.  Clone the repository:
+
     ```sh
     git clone [https://github.com/your-username/mockmate.git](https://github.com/your-username/mockmate.git)
     ```
 2.  Install backend dependencies:
+   
     ```sh
     cd mockmate/backend
     npm install
     ```
 3.  Install frontend dependencies:
+   
     ```sh
     cd ../frontend
     npm install
@@ -100,10 +93,12 @@ GEMINI_API_KEY=your_google_gemini_api_key
 ### Running the Application
 
 1.  Start the backend server (from the `/backend` directory):
+   
     ```sh
     npm run dev
     ```
 2.  Start the frontend development server (from the `/frontend` directory):
+   
     ```sh
     npm run dev
     ```
