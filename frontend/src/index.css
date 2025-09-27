@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+:root,
+body {
+  --font-display: "Urbanist", sans-serif;
+  --breakpoint-3xl: 1920px;
+  --color-primary: #ff9324;
+}
+
+.text-primary {
+  color: #ff9324;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+  }
+  body {
+    background-color: #fcfbfc;
+    overflow-x: hidden;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer utilities {
+  @keyframes text-shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-text-shine {
+    animation: text-shine 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes blob1 {
+    0%,
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -60px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+
+  @keyframes blob2 {
+    0%,
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(-40px, 60px) scale(1.05);
+    }
+    66% {
+      transform: translate(20px, -40px) scale(0.95);
+    }
+  }
+
+  @keyframes blob3 {
+    0%,
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(20px, 140px) scale(1.15);
+    }
+    66% {
+      transform: translate(-30px, -30px) scale(0.85);
+    }
+  }
+
+  .animate-blob1 {
+    animation: blob1 8s ease-in-out infinite;
+  }
+  .animate-blob2 {
+    animation: blob2 10s ease-in-out infinite;
+  }
+  .animate-blob3 {
+    animation: blob3 12s ease-in-out infinite;
+  }
+}
+
+.input-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem; /* 3 * 0.25rem */
+  font-size: 0.875rem; /* text-sm */
+  color: #000; /* text-black */
+  background-color: rgba(243, 244, 246, 0.5); /* bg-gray-50/50 */
+  border-radius: 0.375rem; /* rounded */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  margin-bottom: 1rem; /* mb-4 */
+  margin-top: 0.75rem; /* mt-3 */
+  border: 1px solid #3b82f6; /* border-blue-500 */
+  outline: none;
+}
+
+.input-box:focus-within {
+  border-color: #f97316; /* border-orange-300 */
+}
+
+.btn-primary {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  background-color: #000000;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(251, 146, 60, 0.05),
+    0 4px 6px -2px rgba(251, 146, 60, 0.05); /* shadow-lg shadow-orange-600/5 */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  margin-bottom: 1rem; /* mb-4 */
+  margin-top: 0.75rem; /* mt-3 */
+  border-radius: 0.375rem; /* rounded */
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #ffe4c9; /* text-black */
+  color: #ff9324;
+  font-weight: 500;
+  border: 1px solid #ff8000;
+}
+
+.btn-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem; /* gap-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600; /* font-semibold */
+  color: white; /* text-black */
+  background: linear-gradient(
+    to right,
+    #ff9324,
+    #e99a4b
+  ); /* bg-gradient-to-r from-[#ff9324] to-[#e99a4b] */
+  border-radius: 0.375rem; /* rounded */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  margin-bottom: 1rem; /* mb-4 */
+  margin-top: 0.75rem; /* mt-3 */
+}
+
+.btn-small:hover {
+  background: #fce5cd; /* text-black */
+  color: #ff9324;
+  font-weight: 600;
+  border: 1px solid #ff8000;
+}
+
+/* 
+.input-box {
+  @apply w-full flex justify-between gap-3 text-sm text-black bg-gray-50/50 rounded px-4 py-3 mb-4 mt-3 border border-blue-500 outline-none focus-within:border-orange-300;
+}
+
+.btn-primary {
+  @apply w-full flex items-center justify-between gap-3 text-sm font-medium text-black bg-gray-50/50 shadow-lg shadow-orange-600/5 p-[10px] rounded px-4 py-3 mb-4 mt-3 border border-blue-500;
+}
+
+.btn-small {
+  @apply flex items-center justify-between gap-3 bg-gradient-to-r from-[#ff9324] to-[#e99a4b] text-sm font-semibold text-black rounded px-4 py-3 mb-4 mt-3 border border-blue-500;
+} */
